@@ -5,20 +5,20 @@
 class Example2 < Formula
   desc "Example for Golang Training"
   homepage "https://github.com/golang-training-examples/example2"
-  version "0.4.0"
+  version "0.5.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/golang-training-examples/example2/releases/download/v0.4.0/example2_v0.4.0_darwin_amd64.tar.gz"
-      sha256 "b1eaed005f75d82d252b44a226d74d98809bae5434e25d8de82c0b6fc16772a4"
+    if Hardware::CPU.arm?
+      url "https://github.com/golang-training-examples/example2/releases/download/v0.5.0/example2_v0.5.0_darwin_arm64.tar.gz"
+      sha256 "0aa7cbedb9ce959c80c49e1e63e0f3006221f545a18359f1c7abbf170b77a05f"
 
       def install
         bin.install "example2"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/golang-training-examples/example2/releases/download/v0.4.0/example2_v0.4.0_darwin_arm64.tar.gz"
-      sha256 "c3843a2dc2c151870112ca1fcaa1abb41e78bd537b741766c156a662b5f6187c"
+    if Hardware::CPU.intel?
+      url "https://github.com/golang-training-examples/example2/releases/download/v0.5.0/example2_v0.5.0_darwin_amd64.tar.gz"
+      sha256 "d11ea7bbb29ca7f3ef778d6c69db2e302b473b5107fccf70d92fd632d560e5f3"
 
       def install
         bin.install "example2"
@@ -27,17 +27,17 @@ class Example2 < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/golang-training-examples/example2/releases/download/v0.4.0/example2_v0.4.0_linux_amd64.tar.gz"
-      sha256 "8dc865b8b1a1624c0ba027d77522452eb14303192830940a3cb6190bc938069f"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/golang-training-examples/example2/releases/download/v0.5.0/example2_v0.5.0_linux_arm64.tar.gz"
+      sha256 "b93bdfeaceeeb65a60511529b605224e17c0b1899ffb180006d88892ee41a4bb"
 
       def install
         bin.install "example2"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/golang-training-examples/example2/releases/download/v0.4.0/example2_v0.4.0_linux_arm64.tar.gz"
-      sha256 "806f990d117613d3b208b189b5926d0be1e1708ee4b5a50e85cac362ce1e1cce"
+    if Hardware::CPU.intel?
+      url "https://github.com/golang-training-examples/example2/releases/download/v0.5.0/example2_v0.5.0_linux_amd64.tar.gz"
+      sha256 "6ef7a67dacdf069fce740603baa6a5c8b743bb53574e5ac694fa30b6e4166faf"
 
       def install
         bin.install "example2"
