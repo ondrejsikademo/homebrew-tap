@@ -5,20 +5,20 @@
 class Example2 < Formula
   desc "Example for Golang Training"
   homepage "https://github.com/golang-training-examples/example2"
-  version "0.8.0"
+  version "0.10.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/golang-training-examples/example2/releases/download/v0.8.0/example2_v0.8.0_darwin_arm64.tar.gz"
-      sha256 "3802d98e50f57a32460c4320a58101cfdd535e33bba04f2784a674294b04dd1e"
+      url "https://github.com/golang-training-examples/example2/releases/download/v0.10.0/example2_v0.10.0_darwin_arm64.tar.gz"
+      sha256 "c40ff3041af8697d93a31610f4e71ef9099b714383ce58ff5166c440aa9d4ee0"
 
       def install
         bin.install "example2"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/golang-training-examples/example2/releases/download/v0.8.0/example2_v0.8.0_darwin_amd64.tar.gz"
-      sha256 "0fef783dad83d7cd79ec92621db4ddf0006ce430e8bdcdab2e548aad146d566a"
+      url "https://github.com/golang-training-examples/example2/releases/download/v0.10.0/example2_v0.10.0_darwin_amd64.tar.gz"
+      sha256 "3a932917893b863fdf5b1f7c3359dd2c40199f8f89a565452160eb91f155595f"
 
       def install
         bin.install "example2"
@@ -28,16 +28,16 @@ class Example2 < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/golang-training-examples/example2/releases/download/v0.8.0/example2_v0.8.0_linux_arm64.tar.gz"
-      sha256 "893ecc405111963381c9a82b784bbbaf47cb8faea95added52d324fca2c8aba0"
+      url "https://github.com/golang-training-examples/example2/releases/download/v0.10.0/example2_v0.10.0_linux_arm64.tar.gz"
+      sha256 "f78c9234c54ca5d6a8632736cb43367ecf0e622920a052e8a337fde8fc13c3b5"
 
       def install
         bin.install "example2"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/golang-training-examples/example2/releases/download/v0.8.0/example2_v0.8.0_linux_amd64.tar.gz"
-      sha256 "930b6eb9f6f51fefc1e7b0d35b7a7f5ef8b131fbc5b356638bd2ab12473e0263"
+      url "https://github.com/golang-training-examples/example2/releases/download/v0.10.0/example2_v0.10.0_linux_amd64.tar.gz"
+      sha256 "f132aa9a9ebb1b2b1027d68c4d3ecd39b689e874237ed1500ee372ffa1e1b9f3"
 
       def install
         bin.install "example2"
